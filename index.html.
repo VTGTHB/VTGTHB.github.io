@@ -1,8 +1,197 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volodymyr | AP CS Portfolio</title>
+    <style>
+        /* Modern Reset and CSS Variables */
+        :root {
+            --bg-color: #0d1117;
+            --surface-color: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-glow: rgba(88, 166, 255, 0.15);
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        /* Container Layout */
+        .portfolio-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Header Layout */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Section Global Rules */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Tech Badges */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        /* Projects Layout */
+        .project-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Links and Anchors */
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Layout */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <div class="portfolio-container">
+        
+        <!-- Header -->
+        <header>
+            <h1>Volodymyr</h1>
+            <div class="subtitle">AP Computer Science Student & Developer</div>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi there! I am a high school student deeply passionate about programming, software engineering, and computational logic. Currently immersed in AP Computer Science, I spend my time exploring algorithms, structural system designs, and building clean code architectures. 
+            </p>
+            <p>
+                I enjoy transforming abstract logic challenges into tangible, functional applications. When I'm not studying or debugging, I'm usually exploring open-source repositories or working on personal development projects.
+            </p>
+            
+            <div class="skills-grid">
+                <span class="badge">Java</span>
+                <span class="badge">Object-Oriented Programming</span>
+                <span class="badge">Data Structures</span>
+                <span class="badge">Algorithms</span>
+                <span class="badge">HTML5 / CSS3</span>
+                <span class="badge">Git / GitHub</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">AP CS Lab Portfolios & Repository</div>
+                <p>A structured compilation of fundamental algorithms, logic puzzles, and core object-oriented projects completed throughout my academic coursework.</p>
+                <a href="https://github.com/VTGTHB/VTGTHB.github.io" class="btn-link" target="_blank">View GitHub Repository &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Volodymyr. Built with HTML & CSS.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
