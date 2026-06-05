@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volodymyr | AP CS Portfolio</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Custom Theme Variables overrides for dark mode style */
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        .text-muted-custom {
+            color: #8b949e !important;
+        }
+        /* Project card hover effects */
+        .project-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: #58a6ff;
+            box-shadow: 0 4px 20px rgba(88, 166, 255, 0.15);
+        }
+        /* Custom badge styling */
+        .badge-custom {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Main Container -->
+    <div class="container my-5" style="max-width: 750px;">
+        
+        <!-- Header Section -->
+        <header class="pb-4 mb-5 border-bottom border-secondary-subtle">
+            <h1 class="display-5 fw-bold tracking-tight">Volodymyr</h1>
+            <p class="text-primary fs-5 mb-0 fw-medium">AP Computer Science Student & Developer</p>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about" class="mb-5">
+            <h2 class="h4 fw-semibold mb-3">About Me</h2>
+            <p class="fs-6 lh-base mb-3">
+                Hi there! I am a high school student deeply passionate about programming, software engineering, and computational logic. Currently immersed in AP Computer Science, I spend my time exploring algorithms, structural system designs, and building clean code architectures. 
+            </p>
+            <p class="fs-6 lh-base mb-4">
+                I enjoy transforming abstract logic challenges into tangible, functional applications. When I'm not studying or debugging, I'm usually exploring open-source repositories or working on personal development projects.
+            </p>
+            
+            <!-- Technical Skills Badges -->
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge badge-custom px-3 py-2 rounded">Java</span>
+                <span class="badge badge-custom px-3 py-2 rounded">Object-Oriented Programming</span>
+                <span class="badge badge-custom px-3 py-2 rounded">Data Structures</span>
+                <span class="badge badge-custom px-3 py-2 rounded">Algorithms</span>
+                <span class="badge badge-custom px-3 py-2 rounded">HTML5 / CSS3</span>
+                <span class="badge badge-custom px-3 py-2 rounded">Git / GitHub</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-5">
+            <h2 class="h4 fw-semibold mb-4">Featured Projects</h2>
+            
+            <!-- Project Card -->
+            <div class="card project-card p-4 rounded-3">
+                <div class="card-body p-0">
+                    <h3 class="h5 card-title fw-bold mb-2">AP CS Lab Portfolios & Repository</h3>
+                    <p class="card-text text-muted-custom mb-3">A structured compilation of fundamental algorithms, logic puzzles, and core object-oriented projects completed throughout my academic coursework.</p>
+                    <a href="https://github.com" class="btn text-primary p-0 fw-semibold text-decoration-none" target="_blank">
+                        View GitHub Repository &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="pt-4 mt-5 border-top border-secondary-subtle text-center">
+            <p class="text-muted-custom small mb-0">&copy; 2026 Volodymyr. Built with Bootstrap.</p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS CDN (Includes Popper) -->
+    <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
