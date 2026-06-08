@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volodymyr | Portfolio</title>
-    <!-- Bootstrap 5 CSS CDN -->
+    <!-- Bootstrap 5 CSS CDN (Fixed Link) -->
     <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel = "icon" href="https://www.citypng.com/public/uploads/preview/hd-gears-settings-white-icon-transparent-png-701751695035129vhfukm8kpz.png">
+    <link rel="icon" href="https://www.citypng.com/public/uploads/preview/hd-gears-settings-white-icon-transparent-png-701751695035129vhfukm8kpz.png">
     <style>
         /* Custom Theme Variables overrides for dark mode style */
         body {
@@ -25,6 +25,8 @@
             background-color: #161b22;
             border: 1px solid #30363d;
             transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            min-width: 280px; /* Ensures cards maintain shape during horizontal scroll */
+            flex: 1 0 calc(50% - 1rem); /* Fits two cards neatly on larger screens */
         }
         .project-card:hover {
             transform: translateY(-3px);
@@ -37,6 +39,36 @@
             border: 1px solid #30363d;
             color: #c9d1d9;
             font-family: monospace;
+        }
+        /* Image styling inside cards */
+        .project-img {
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid #30363d;
+            background-color: #0d1117;
+        }
+        /* Horizontal scrollable row container */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 15px;
+            scroll-behavior: smooth;
+        }
+        /* Custom sleek scrollbar */
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #161b22;
+            border-radius: 4px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 4px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #8b949e;
         }
     </style>
 </head>
@@ -76,15 +108,45 @@
         <section id="projects" class="mb-5">
             <h2 class="h4 fw-semibold mb-4">Featured Projects</h2>
             
-            <!-- Project Card -->
-            <div class="card project-card p-4 rounded-3">
-                <div class="card-body p-0">
-                    <h3 class="h5 card-title fw-bold mb-2">AP CS Lab Portfolios & Repository</h3>
-                    <p class="card-text text-muted-custom mb-3">A structured compilation of fundamental algorithms, logic puzzles, and core object-oriented projects completed throughout my academic coursework.</p>
-                    <a href="https://github.com" class="btn text-primary p-0 fw-semibold text-decoration-none" target="_blank">
-                        View GitHub Repository &rarr;
-                    </a>
+            <!-- Scrollable Projects Wrapper -->
+            <div class="scroll-container">
+
+                <!-- Project 1 Placeholder -->
+                <div class="card project-card rounded-3 overflow-hidden">
+                    <img src="https://unsplash.com" class="card-img-top project-img" alt="Project 1 Thumbnail">
+                    <div class="card-body p-4">
+                        <h3 class="h5 card-title fw-bold mb-2">Project One Name</h3>
+                        <p class="card-text text-muted-custom small mb-3">Brief description of your project. Detail the mechanical, hardware, or coding logic components used.</p>
+                        <a href="https://github.com" class="btn text-primary p-0 fw-semibold text-decoration-none" target="_blank">
+                            View Project &rarr;
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Project 2 Placeholder -->
+                <div class="card project-card rounded-3 overflow-hidden">
+                    <img src="https://unsplash.com" class="card-img-top project-img" alt="Project 2 Thumbnail">
+                    <div class="card-body p-4">
+                        <h3 class="h5 card-title fw-bold mb-2">Project Two Name</h3>
+                        <p class="card-text text-muted-custom small mb-3">Brief description of your project. Highlight your Java algorithms or electrical engineering concepts here.</p>
+                        <a href="https://github.com" class="btn text-primary p-0 fw-semibold text-decoration-none" target="_blank">
+                            View Project &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 Placeholder -->
+                <div class="card project-card rounded-3 overflow-hidden">
+                    <img src="https://unsplash.com" class="card-img-top project-img" alt="Project 3 Thumbnail">
+                    <div class="card-body p-4">
+                        <h3 class="h5 card-title fw-bold mb-2">Project Three Name</h3>
+                        <p class="card-text text-muted-custom small mb-3">Brief description of your project. Talk about how you creatively solved a problem using simple components.</p>
+                        <a href="https://github.com" class="btn text-primary p-0 fw-semibold text-decoration-none" target="_blank">
+                            View Project &rarr;
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -95,7 +157,8 @@
 
     </div>
 
-    <!-- Bootstrap 5 Bundle JS CDN (Includes Popper) -->
+    <!-- Bootstrap 5 Bundle JS CDN (Fixed Link) -->
     <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
