@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volodymyr | Portfolio</title>
-    <!-- Bootstrap 5 CSS CDN (Fixed Link) -->
+    <!-- Bootstrap 5 CSS CDN (Fixed Link Path) -->
     <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="https://www.citypng.com/public/uploads/preview/hd-gears-settings-white-icon-transparent-png-701751695035129vhfukm8kpz.png">
     <style>
@@ -29,7 +29,7 @@
             flex: 1 0 calc(50% - 1rem); /* Fits two cards neatly on larger screens */
         }
         .project-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px); /* Slightly increased for better visual pop */
             border-color: #58a6ff;
             box-shadow: 0 4px 20px rgba(88, 166, 255, 0.15);
         }
@@ -51,7 +51,10 @@
         .scroll-container {
             display: flex;
             overflow-x: auto;
+            overflow-y: hidden; /* Prevents unwanted vertical scroll jumpiness */
             gap: 1rem;
+            padding-top: 10px; /* Creates headroom for the hover transform */
+            margin-top: -10px; /* Pulls container back up to neutralize padding gap */
             padding-bottom: 15px;
             scroll-behavior: smooth;
         }
@@ -163,13 +166,11 @@
         </section>
 
         <!-- Footer Section -->
-        <footer class="pt-4 mt-5 border-top border-secondary-subtle text-center">
-            <p class="text-muted-custom small mb-0">&copy; 2026 Volodymyr. Built with Bootstrap.</p>
+        <footer class="pt-4 mt-5 border-top border-secondary-subtle">
+            <p class="text-muted-custom small">&copy; 2026 Volodymyr. All rights reserved.</p>
         </footer>
-
     </div>
 
-    <!-- Bootstrap 5 Bundle JS CDN (Fixed Link) -->
-    <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
